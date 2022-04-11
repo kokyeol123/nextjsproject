@@ -11,3 +11,8 @@
     margin-right: 1rem;
     color: #fff;
 }
+
+.signinup {
+    display: flex;
+    gap: 1rem;
+}

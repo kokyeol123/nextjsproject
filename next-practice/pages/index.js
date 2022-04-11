@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+// vercel을 사용하면 깃이랑 사용해서 간단히 배포할 수 있다.
+
 export default function Home( {posts} ) {
 
   return (

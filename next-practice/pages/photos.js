@@ -2,8 +2,12 @@ import HeadInfo from "../components/HeadInfo"
 import Image from 'next/image'
 import photosStyles from "../styles/Photos.module.css"
 import Link from 'next/link'
+import { useState } from "react";
 
-const photos = ( {photos} ) => {
+const Photos = ( {photos} ) => {
+
+    const [reloadTest, setReloadTest] = useState();
+
     return (
         <div>
             <HeadInfo title="My blog Photos" />
@@ -24,6 +28,10 @@ const photos = ( {photos} ) => {
                         <span>{photo.title}</span>
                     </li>
                 ))}
+                <li>
+                    <input onChange={(e)=> {setReloadTest(e.target.value)}}></input>
+                    <a>{reloadTest}</a>
+                </li>
             </ul>
         </div>
     )
@@ -45,4 +53,4 @@ export const getStaticProps = async() => {
     }
 }
 
-export default photos
+export default Photos
